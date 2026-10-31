@@ -1,0 +1,18 @@
+
+from pydantic import BaseModel
+from typing import Optional
+
+
+class TaskCreate(BaseModel):
+    title: str
+    description: Optional[str] = None
+    completed: bool = False
+
+
+class TaskResponse(BaseModel):
+    id: int
+    title: str
+    description: Optional[str] = None
+    completed: bool
+
+    model_config = {"from_attributes": True}
