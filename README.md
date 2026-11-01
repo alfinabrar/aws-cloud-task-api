@@ -40,7 +40,7 @@ The application runs on an AWS EC2 instance using Docker Compose to manage the A
 | Validation | Pydantic |
 | Containerization | Docker, Docker Compose |
 | Testing | Pytest, HTTPX |
-| CI/CD | GitHub Actions |
+| CI | GitHub Actions |
 | Cloud Infrastructure | AWS EC2 |
 | API Documentation | Swagger UI (OpenAPI) |
 
