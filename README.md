@@ -8,23 +8,19 @@ AWS Cloud Task API is a task management REST API that allows users to create, re
 
 The application uses FastAPI for the backend, PostgreSQL for persistent data storage, and Docker Compose to orchestrate the application and database containers.
 
-## Architecture
 
-```text
-              Client
-                |
-                v
-          FastAPI Application
-             (Port 8000)
-                |
-                v
-            PostgreSQL
-             (Port 5432)
+### 2. Replace bagian Prerequisites
 
-       Docker Compose Environment
-                |
-                v
-             AWS EC2
+```markdown
+### Prerequisites
+
+Make sure you have installed:
+
+- Docker Desktop
+- Docker Compose
+- Git
+
+No local Python installation is required when running the application using Docker.
 ```
 
 ## Tech Stack
@@ -153,10 +149,10 @@ docker compose down -v
 
 ## Running Tests
 
-Run the automated test suite:
+Run the automated test suite inside the API container:
 
 ```bash
-python -m pytest -v
+docker compose exec api python -m pytest -v
 ```
 
 The project includes tests for:
